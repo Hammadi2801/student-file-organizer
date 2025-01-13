@@ -1,0 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const loginSection = document.getElementById('login-section');
+    const mainSection = document.getElementById('main-section');
+    const loginForm = document.getElementById('login-form');
+    const uploadForm = document.getElementById('upload-form');
+    const fileList = document.getElementById('file-list');
+    const searchBar = document.getElementById('search-bar');
+
+    let files = JSON.parse(localStorage.getItem('files')) || [];
+
+    // Dummy login credentials
+    const validUsername = 'student';
+    const validPassword = '1234';
+
+    // Handle login
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === validUsername && password === validPassword) {
+            loginSection.style.display = 'none';
+            mainSection.style.display = 'block';
+        } else {
+            alert('Invalid login credentials');
+        }
+    });
+
+    // Handle file upload
+    uploadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fileInput = document.getElementById('

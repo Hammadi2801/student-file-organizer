@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student File Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-section">
+            <h1>Welcome to Student File Organizer</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="main-section" style="display: none;">
+            <h2>Upload and Organize Your Files</h2>
+            <form id="upload-form">
+                <input type="file" id="file-input" required>
+                <input type="text" id="file-category" placeholder="File Category (e.g., Homework, Notes)" required>
+                <button type="submit">Upload File</button>
+            </form>
+            <div>
+                <input type="text" id="search-bar" placeholder="Search files...">
+            </div>
+            <ul id="file-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
